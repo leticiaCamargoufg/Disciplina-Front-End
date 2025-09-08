@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de IMC</h1>
+
+    <input type="text" id="altura" placeholder="Altura (m)">
+    <input type="number" step="0.1" id="peso" placeholder="Peso (kg)">
+
+    <div class="botoes">
+      <button class="calcular" onclick="calcularIMC()">Calcular</button>
+      <button class="limpar" onclick="limparCampos()">Limpar</button>
+    </div>
+
+    <div id="mensagem" class="erro"></div>
+    <div id="resultado" class="resultado"></div>
+
+    <table>
+      <tr>
+        <th>IMC</th>
+        <th>Situação</th>
+        <th>Grau de Obesidade</th>
+      </tr>
+      <tr><td>&lt; 16</td><td>Magreza grave</td><td>0</td></tr>
+      <tr><td>16 - 16,9</td><td>Magreza moderada</td><td>0</td></tr>
+      <tr><td>17 - 18,4</td><td>Magreza leve</td><td>0</td></tr>
+      <tr><td>18,5 - 24,9</td><td>Saudável</td><td>0</td></tr>
+      <tr><td>25 - 29,9</td><td>Sobrepeso</td><td>I</td></tr>
+      <tr><td>30 - 34,9</td><td>Obesidade Grau I</td><td>I</td></tr>
+      <tr><td>35 - 39,9</td><td>Obesidade Grau II (severa)</td><td>II</td></tr>
+      <tr><td>&ge; 40</td><td>Obesidade Grau III (mórbida)</td><td>III</td></tr>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

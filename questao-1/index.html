@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Simples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora</h1>
+    <form id="calcForm">
+      <input type="number" id="num1" placeholder="Número 1" required>
+      <input type="number" id="num2" placeholder="Número 2" required>
+
+      <select id="operador" required>
+        <option value="">Selecione</option>
+        <option value="+">Somar (+)</option>
+        <option value="-">Subtrair (-)</option>
+        <option value="*">Multiplicar (*)</option>
+        <option value="/">Dividir (/)</option>
+      </select>
+
+      <button type="submit">Calcular</button>
+    </form>
+    <div id="mensagem" class="erro"></div>
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
