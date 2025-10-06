@@ -19,9 +19,6 @@ export default function Sidebar() {
     <aside className="w-64 bg-[#eaf4ff] h-[calc(100vh-56px)] border-r px-3 py-4">
       <div className="space-y-2">
         <Item href="/dashboard" icon="🏠" label="Dashboard" />
-        <Item href="/dashboard/mine" icon="📝" label="Minhas Notas" />
-        <Item href="/dashboard/categories" icon="🗂️" label="Categorias" />
-        <Item href="/dashboard/tags" icon="🏷️" label="Tags" />
       </div>
       <div className="absolute bottom-4 left-3">
         <Link href="/settings" className="text-slate-500 text-sm">⚙️ Configurações</Link>
