@@ -39,7 +39,7 @@ export default function SettingsSidebar() {
     const active = (hash || "#profile") === href;
     return (
       <Link
-        href={`/settings${href}`}
+        href={`/${href}`}
         className={`flex items-center gap-3 px-4 py-2 rounded-lg text-[15px] 
           ${active
             ? "bg-[#dcebff] text-[#0e5cc4] font-medium"
@@ -63,10 +63,10 @@ export default function SettingsSidebar() {
   return (
     <aside className="w-64 bg-[#eaf4ff] h-[calc(100vh-56px)] border-r px-3 py-4">
       <div className="flex flex-col gap-2">
-        {item("#profile", <IconUser className="w-5 h-5" />, "Perfil")}
-        {item("#theme", <IconMoon className="w-5 h-5" />, "Tema")}
+        {item("settings#profile", <IconUser className="w-5 h-5" />, "Perfil")}
+        {item("dashboard", <IconMoon className="w-5 h-5" />, "dashboard")}
       </div>
-
+      <IconMoon className="w-5 h-5" />
       <button
         onClick={logout}
         className="mt-8 ml-1 flex items-center gap-2 text-sm text-red-600 hover:text-red-700"

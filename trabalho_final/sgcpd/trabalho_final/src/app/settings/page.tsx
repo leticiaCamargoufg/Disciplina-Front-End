@@ -188,31 +188,6 @@ export default function Settings() {
             )}
           </section>
 
-          {/* TEMA */}
-          <section className="max-w-2xl mx-auto mt-6 bg-white rounded-2xl shadow border p-6">
-            <h2 className="settings-heading mb-4">Tema</h2>
-            <div className="flex items-center gap-6">
-              <label className="inline-flex items-center gap-2 settings-label">
-                <input
-                  type="radio"
-                  name="theme"
-                  checked={theme === "light"}
-                  onChange={() => setTheme("light")}
-                />
-                Claro
-              </label>
-              <label className="inline-flex items-center gap-2 settings-label">
-                <input
-                  type="radio"
-                  name="theme"
-                  checked={theme === "dark"}
-                  onChange={() => setTheme("dark")}
-                />
-                Escuro
-              </label>
-            </div>
-          </section>
-
           {/* ZONA DE PERIGO */}
           <section className="max-w-2xl mx-auto mt-6 bg-white rounded-2xl shadow p-6 border">
             <h2 className="text-lg font-semibold mb-2 text-red-600">

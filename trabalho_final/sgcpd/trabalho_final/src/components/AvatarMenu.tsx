@@ -58,9 +58,9 @@ export default function AvatarMenu() {
             <IconUser className="w-4 h-4" />
             <span>Perfil</span>
           </Link>
-          <Link href="/settings#theme" className={baseItem}>
+          <Link href="/dashboard" className={baseItem}>
             <IconSun className="w-4 h-4" />
-            <span>Tema</span>
+            <span>dashboard</span>
           </Link>
           <button onClick={logout} className={`${baseItem} text-red-600 hover:text-red-700`}>
             <IconLogout className="w-4 h-4" />

@@ -142,7 +142,6 @@ src/
   - Botão flutuante (FAB) para criar nota
 - **Configurações**
   - Editar **nome** e **email**
-  - **Tema** claro/escuro com persistência
   - **Excluir conta** (remove usuário e seus dados)
 
 ---
