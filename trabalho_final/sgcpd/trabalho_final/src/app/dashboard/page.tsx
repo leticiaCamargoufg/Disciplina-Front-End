@@ -22,19 +22,20 @@ type Note = {
 export default function Dashboard() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
-  const auth = token ? { Authorization: `Bearer ${token}` } : {};
+  const headers: HeadersInit = token ? { Authorization: `Bearer ${token}` } : {};
 
+  const auth: HeadersInit = token ? { Authorization: `Bearer ${token}` } : {};
+  
   const [notes, setNotes] = useState<Note[]>([]);
   const [q, setQ] = useState("");
   const [category, setCategory] = useState<string | undefined>(undefined);
   const [tag, setTag] = useState<string | undefined>(undefined);
   const [status, setStatus] = useState<string | undefined>(undefined);
-
+  
   const [view, setView] = useState<Note | null>(null);
   const [edit, setEdit] = useState<Note | null>(null);
   const [del, setDel] = useState<Note | null>(null);
   const [toast, setToast] = useState<string>("");
-
   const params = useMemo(() => {
     const s = new URLSearchParams();
     if (q) s.set("q", q);

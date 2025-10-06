@@ -8,7 +8,7 @@ export default function Settings() {
   // token p/ chamadas autenticadas
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
-  const auth = token ? { Authorization: `Bearer ${token}` } : {};
+  const auth: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
 
   // estado do perfil
   const [name, setName] = useState("");

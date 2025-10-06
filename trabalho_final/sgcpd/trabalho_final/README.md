@@ -228,11 +228,6 @@ No App Router, `headers()`/`cookies()` são **APIs assíncronas**. Use utilitár
 
 ---
 
-## 📄 Licença
-
-Projeto educacional. Adapte a licença conforme sua necessidade (ex.: MIT).
-
----
 
 ## 👤 Autor(es)
 Trabalho final:

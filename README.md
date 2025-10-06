@@ -226,11 +226,6 @@ No App Router, `headers()`/`cookies()` são **APIs assíncronas**. Use utilitár
 5. `pnpm dev` → http://localhost:3000  
 6. Cadastrar usuário em **/signup** e usar o **/dashboard**
 
----
-
-## 📄 Licença
-
-Projeto educacional. Adapte a licença conforme sua necessidade (ex.: MIT).
 
 ---
 
