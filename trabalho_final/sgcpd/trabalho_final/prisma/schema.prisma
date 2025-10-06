@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String   @id @default(cuid())
+  name              String
+  email             String   @unique
+  passwordHash      String
+  role              String   @default("user")
+  resetToken        String?  @unique
+  resetTokenExpires DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  notes      Note[]
+  categories Category[]
+  tags       Tag[]
+}
+
+enum NoteStatus {
+  todo
+  doing
+  done
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  title     String
+  content   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  date      DateTime @default(now())
+  
+  status    NoteStatus?
+  
+  // quando o usuário for apagado, apaga as notas dele
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?
+
+  tags NoteTag[]
+}
+
+model Category {
+  id     String @id @default(cuid())
+  name   String
+
+  // apaga categorias do usuário
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  notes  Note[]
+  @@unique([userId, name])
+}
+
+model Tag {
+  id     String @id @default(cuid())
+  name   String
+
+  // apaga tags do usuário
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  notes  NoteTag[]
+  @@unique([userId, name])
+}
+
+model NoteTag {
+  // se a nota ou a tag forem removidas, limpa os vínculos
+  note   Note @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  noteId String
+  tag    Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  tagId  String
+
+  @@id([noteId, tagId])
+}
