@@ -235,7 +235,7 @@ Trabalho final:
 https://github.com/leticiaCamargoufg/Disciplina-Front-End/tree/trabalho-final
 
 Discentes: 
-Higor Nóbrega
-Letícia Camargo
-Pedro Felipe Carrijo
+Higor Nóbrega, 
+Letícia Camargo, 
+Pedro Felipe Carrijo, 
 Raniere Luiz
