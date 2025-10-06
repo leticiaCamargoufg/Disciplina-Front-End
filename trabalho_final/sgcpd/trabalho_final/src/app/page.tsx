@@ -12,6 +12,12 @@ export default function LoginPage() {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault(); setError("");
+    if (email == null || email ==''){
+      return setError("Email vazio");
+    }
+  if (password == null || password ==''){
+      return setError("senha vazia");
+    }
     const r = await fetch("/api/auth/login",{ method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ email, password })});
     const data = await r.json();
     if(!r.ok) return setError(data.error || "Falha no login");
