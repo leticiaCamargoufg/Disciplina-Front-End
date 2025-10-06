@@ -52,8 +52,8 @@ GRANT ALL PRIVILEGES ON DATABASE sgcpd_db TO sgcpd_user;
 ### 3) Clonar e configurar
 
 ```bash
-git clone <SEU_REPO>.git
-cd <SEU_REPO>
+git clone <https://github.com/leticiaCamargoufg/Disciplina-Front-End/tree/trabalho-final>.git
+cd <https://github.com/leticiaCamargoufg/Disciplina-Front-End/tree/trabalho-final>
 pnpm i
 ```
 
